@@ -6,9 +6,11 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "prebuild": "rimraf dist/",
     "prebuild:app": "rimraf dist/apps/app",
     "prebuild:subscriber": "rimraf dist/apps/subscriber",
 
+    "build": "npm run build:app && npm run build:subscriber",
     "build:app": "nest build app",
     "build:subscriber": "nest build subscriber",
 
