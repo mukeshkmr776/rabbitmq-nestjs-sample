@@ -24,7 +24,7 @@
     "start:app:prod": "node dist/app/main",
     "start:subscriber:prod": "node dist/subscriber/main",
 
-    "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
+    "format": "prettier --write \"apps/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",

@@ -14,8 +14,8 @@ async function bootstrap() {
       urls: [RABBITMQ_URL],
       queue: RABBITMQ_QUEUE,
       noAck: false,
-      prefetchCount: 1
-    }
+      prefetchCount: 1,
+    },
   });
   await app.listenAsync();
 }

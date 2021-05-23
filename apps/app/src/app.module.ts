@@ -6,10 +6,7 @@ import { AppService } from './app.service';
 import { RabbitMQModule } from './rabbit-mq.module';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot(),
-    RabbitMQModule
-  ],
+  imports: [ConfigModule.forRoot(), RabbitMQModule],
   controllers: [AppController],
   providers: [AppService],
 })
