@@ -1,20 +1,29 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/my-app/src",
+  "sourceRoot": "apps/app/src",
   "monorepo": true,
-  "root": "apps/my-app",
+  "root": "apps/app",
   "compilerOptions": {
     "webpack": true,
-    "tsConfigPath": "apps/my-app/tsconfig.app.json"
+    "tsConfigPath": "apps/app/tsconfig.app.json"
   },
   "projects": {
-    "my-app": {
+    "app": {
       "type": "application",
-      "root": "apps/my-app",
+      "root": "apps/app",
       "entryFile": "main",
-      "sourceRoot": "apps/my-app/src",
+      "sourceRoot": "apps/app/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/my-app/tsconfig.app.json"
+        "tsConfigPath": "apps/app/tsconfig.app.json"
+      }
+    },
+    "subscriber": {
+      "type": "application",
+      "root": "apps/subscriber",
+      "entryFile": "main",
+      "sourceRoot": "apps/subscriber/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/subscriber/tsconfig.app.json"
       }
     }
   }
