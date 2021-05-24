@@ -1,14 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import * as dotenv from 'dotenv';
-
 import { RabbitMQService } from './rabbit-mq.service';
+import * as ConfigurationService from './../../common/configuration.service';
 
-// Loading Environment variables
-dotenv.config();
-
-const RABBITMQ_URL   = process.env.RABBITMQ_URL;
-const RABBITMQ_QUEUE = process.env.RABBITMQ_QUEUE;
+const RABBITMQ_URL = ConfigurationService.getEnvironment('RABBITMQ_URL');
+const RABBITMQ_QUEUE = ConfigurationService.getEnvironment('RABBITMQ_QUEUE');
 
 @Module({
   imports: [
