@@ -14,6 +14,9 @@ async function bootstrap() {
       queue: RABBITMQ_QUEUE,
       noAck: false,
       prefetchCount: 1,
+      queueOptions: {
+        autoDelete: true,
+      },
     },
   });
   await app.listenAsync();
