@@ -1,4 +1,4 @@
-<p align="center" class="d-flex flex-justify-between flex-items-center" style="display: flex; align-items:center; justify-content: center;">
+<p align="center" style="display: flex; align-items:center; justify-content: center;">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
   <span style="font-size: 5rem; padding: 0 20px">+</span>
   <a href="https://rabbitmq.com/" target="blank"><img src="https://www.rabbitmq.com/img/logo-rabbitmq.svg" width="320" alt="RabbitMQ Logo" /></a>
