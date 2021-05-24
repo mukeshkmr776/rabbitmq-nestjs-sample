@@ -30,5 +30,8 @@ $ npm run start:prod:app         # for Express server (Publisher)
 $ npm run start:prod:subscriber  # for Worker (Subscriber)
 ```
 
+## Compilation
+- GitHub Actions is configured with this repository on events **push** and **pull_request**. See <a href="https://github.com/mukeshkmr776/rabbitmq-nestjs-sample/actions">GitHub Actions here</a>
+
 ## Support
 This is a self-learning project. So please don't use it directly in production.
