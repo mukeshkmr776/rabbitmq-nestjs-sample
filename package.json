@@ -6,6 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "clean": "rimraf dist/",
     "prebuild": "rimraf dist/",
     "prebuild:app": "rimraf dist/apps/app",
     "prebuild:subscriber": "rimraf dist/apps/subscriber",
