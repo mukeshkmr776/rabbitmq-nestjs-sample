@@ -24,8 +24,8 @@
     "start:debug:app": "nest start app --debug --watch",
     "start:debug:subscriber": "nest start subscriber --debug --watch",
 
-    "start:app:prod": "node dist/app/main",
-    "start:subscriber:prod": "node dist/subscriber/main",
+    "start:app:prod": "node dist/apps/app/main",
+    "start:subscriber:prod": "node dist/apps/subscriber/main",
 
     "format": "prettier --write \"apps/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -41,6 +41,7 @@
     "@nestjs/core": "^7.6.15",
     "@nestjs/microservices": "^7.6.17",
     "@nestjs/platform-express": "^7.6.15",
+    "@nestjs/serve-static": "^2.1.4",
     "amqp-connection-manager": "^3.2.2",
     "amqplib": "^0.8.0",
     "dotenv": "^10.0.0",

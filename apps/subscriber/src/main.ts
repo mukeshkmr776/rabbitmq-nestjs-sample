@@ -15,6 +15,7 @@ async function bootstrap() {
       noAck: false,
       prefetchCount: 1,
       queueOptions: {
+        durable: true,
         autoDelete: true,
       },
     },
