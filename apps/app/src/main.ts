@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import * as ConfigurationService from './../../common/configuration.service';
+import * as ConfigurationService from '@common/configuration.service';
 
 import { AppModule } from './app.module';
 

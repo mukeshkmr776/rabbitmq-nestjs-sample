@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { RabbitMQService } from './rabbit-mq.service';
-import * as ConfigurationService from './../../common/configuration.service';
+import * as ConfigurationService from '@common/configuration.service';
 
 const RABBITMQ_URL = ConfigurationService.getEnvironment('RABBITMQ_URL');
 const RABBITMQ_QUEUE = ConfigurationService.getEnvironment('RABBITMQ_QUEUE');
