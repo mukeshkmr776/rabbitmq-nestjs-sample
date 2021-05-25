@@ -37,7 +37,8 @@ function convertTo(type: string, value: any) {
     switch(type) {
       case 'number'  : return Number(value);
       case 'string'  : return String(value);
-      case 'boolean' : return Boolean(value);
+      case 'boolean' : return value === 'true';
+      default        : return value;
     }
   } catch (error) {
     console.error(`ERROR - Unable to convert value "${value}" to type ${type}`);

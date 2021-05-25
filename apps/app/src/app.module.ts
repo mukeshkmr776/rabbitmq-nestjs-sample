@@ -4,7 +4,7 @@ import { join, resolve } from 'path';
 
 import * as ConfigurationService from '@common/configuration.service';
 import { RabbitMQModule } from './modules/rabbitmq/rabbit-mq.module';
-import { UserModule } from './apis/users/user.module';
+import { APIModule } from './apis/api.module';
 
 const SERVER_BASE_API = ConfigurationService.getEnvironment('SERVER_BASE_API');
 
@@ -15,7 +15,7 @@ const SERVER_BASE_API = ConfigurationService.getEnvironment('SERVER_BASE_API');
       exclude: [SERVER_BASE_API + '*'],
     }),
     RabbitMQModule,
-    UserModule,
+    APIModule,
   ],
   controllers: [],
   providers: [],

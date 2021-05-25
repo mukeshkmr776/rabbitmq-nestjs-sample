@@ -19,7 +19,7 @@ export class UserController {
     }
     try {
       const message = 'hello ' + id;
-      await this.rabbitMQService.send('add-user', message);
+      this.rabbitMQService.send('add-user', message);
       return `Message sent to the queue - "${message}"`;
     } catch (error) {
       console.log('Error - ', error);
