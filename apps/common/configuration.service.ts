@@ -19,7 +19,7 @@ function validate() {
     let value: any = process.env[key];
 
     if (value === undefined && required) {
-      throw new Error(`Envrionment variable "${key}" is not passed and is required value.`);
+      throw new Error(`Environment variable "${key}" is not passed and is required value.`);
     }
 
     if (value === undefined) {
@@ -28,16 +28,21 @@ function validate() {
 
     CACHE[key] = convertTo(type, value);
   });
-  console.clear();
-  console.log(JSON.stringify(CACHE, null, 4));
+  // console.clear();
+  // console.log(JSON.stringify(CACHE, null, 4));
 }
 
 function convertTo(type: string, value: any) {
-  switch(type) {
-    case 'number'  : return Number(value);
-    case 'string'  : return String(value);
-    case 'boolean' : return Boolean(value);
+  try {
+    switch(type) {
+      case 'number'  : return Number(value);
+      case 'string'  : return String(value);
+      case 'boolean' : return Boolean(value);
+    }
+  } catch (error) {
+    console.error(`ERROR - Unable to convert value "${value}" to type ${type}`);
   }
+  return value;
 }
 
 function getEnvironment(key: string) {
