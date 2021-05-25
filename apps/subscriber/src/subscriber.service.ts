@@ -4,7 +4,7 @@ import { RmqContext } from '@nestjs/microservices';
 @Injectable()
 export class SubscriberService {
   onUserAdd(data: Record<string, any>, context: RmqContext) {
-    console.log('data - ', data);
+    console.log(`Received: ${data}`);
 
     const channel = context.getChannelRef();
     const originalMsg = context.getMessage();
